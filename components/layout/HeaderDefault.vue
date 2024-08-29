@@ -22,8 +22,8 @@ onUnmounted(() => {
 <template>
   <header
     :class="{
-      'border-b border-gray-500/50 bg-gray-950': isScrolled,
-      'bg-transparent': !isScrolled,
+      'border-b border-gray-500/50 bg-gray-50 dark:bg-gray-950': isScrolled,
+      'bg-transparent text-gray-50': !isScrolled,
     }"
     class="h-[68px] flex shadow-sm fixed top-0 left-0 w-full z-30 transition-colors duration-300"
     @scroll="onScroll"
@@ -40,7 +40,7 @@ onUnmounted(() => {
       <transition name="slide-down">
         <nav
           v-if="menu"
-          class="flex flex-col justify-center items-center absolute top-[68px] left-0 w-full bg-gray-950 shadow-md z-20"
+          class="flex flex-col justify-center items-center absolute top-[68px] left-0 w-full bg-gray-50 dark:bg-gray-950 shadow-md z-20 py-4"
         >
           <NuxtLink to="/" class="hover:text-lime-500 py-4">Home</NuxtLink>
           <NuxtLink to="/room" class="hover:text-lime-500 py-4">Rooms</NuxtLink>
@@ -53,10 +53,11 @@ onUnmounted(() => {
           <NuxtLink to="/contact" class="hover:text-lime-500 py-4"
             >Contact</NuxtLink
           >
+          <AppToggleTheme />
         </nav>
       </transition>
       <nav
-        class="hidden md:flex flex-1 justify-end space-x-8 uppercase tracking-wider text-lg lg:text-xl font-medium"
+        class="hidden md:flex flex-1 justify-end items-center space-x-2 xl:space-x-8 uppercase tracking-wider text-lg lg:text-xl font-medium"
       >
         <NuxtLink to="/" class="hover:text-lime-500 py-4">Home</NuxtLink>
         <NuxtLink to="/room" class="hover:text-lime-500 py-4">Rooms</NuxtLink>
@@ -67,6 +68,8 @@ onUnmounted(() => {
         <NuxtLink to="/contact" class="hover:text-lime-500 py-4"
           >Contact</NuxtLink
         >
+
+        <AppToggleTheme />
       </nav>
     </PageContainer>
   </header>
