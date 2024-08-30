@@ -61,7 +61,7 @@ onUnmounted(() => {
               to="/facilities" class="hover:text-lime-500 py-4"
           >Facilities
           </NuxtLink>
-          <NuxtLink to="/about" class="hover:text-lime-500 py-4"
+          <NuxtLink to="/about-us" class="hover:text-lime-500 py-4"
           >About
           </NuxtLink
           >
@@ -88,7 +88,7 @@ onUnmounted(() => {
           </NuxtLink>
           <AppDropdown :items="items" v-if="isHovered" @mouseenter="handleHover" @mouseleave="handleLeave" />
         </div>
-        <NuxtLink to="/about" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">About</NuxtLink>
+        <NuxtLink to="/about-us" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">About</NuxtLink>
         <NuxtLink to="/contact" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"
         >Contact
         </NuxtLink

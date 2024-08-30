@@ -31,7 +31,7 @@
                 >
               </li>
               <li>
-                <NuxtLink to="/about" class="hover:text-lime-500"
+                <NuxtLink to="/pages/about-us" class="hover:text-lime-500"
                   >About</NuxtLink
                 >
               </li>
