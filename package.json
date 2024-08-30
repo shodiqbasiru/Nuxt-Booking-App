@@ -13,6 +13,7 @@
     "@primevue/nuxt-module": "^4.0.5",
     "@primevue/themes": "^4.0.5",
     "nuxt": "^3.13.0",
+    "nuxt-swiper": "^1.2.2",
     "primevue": "^4.0.5",
     "vue": "latest"
   },

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 const props = defineProps({
   label: {
     type: String,
@@ -39,7 +40,7 @@ const variantClasses: any = {
   primary: `bg-lime-500 dark:bg-lime-600 hover:bg-lime-500 dark:hover:bg-lime-700 text-gray-900 dark:text-gray-50`,
   secondary: `bg-gray-50 hover:bg-gray-500 text-black`,
   secondaryOutline: `bg-transparent border border-gray-50 hover:bg-gray-50 text-gray-50 hover:text-gray-950`,
-  accent: `bg-amber-200 hover:bg-amber-300 text-black`
+  accent: `bg-amber-200 hover:bg-amber-300 text-black`,
 };
 
 const textTransform: any = {
@@ -67,6 +68,6 @@ const navigate = (path: string) => {
     @click="navigate(to)"
     :type="typeClasses[type]"
   >
-  {{ label }}
-  </button>
+    {{ label }}
+  </button>  
 </template>

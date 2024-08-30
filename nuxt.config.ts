@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@nuxt/icon",
+    "nuxt-swiper"
   ],
   colorMode: {
     preference: 'dark',

@@ -25,7 +25,7 @@ onUnmounted(() => {
       'border-b border-gray-500/50 bg-gray-50 dark:bg-gray-950': isScrolled,
       'bg-transparent text-gray-50': !isScrolled,
     }"
-    class="h-[68px] flex shadow-sm fixed top-0 left-0 w-full z-30 transition-colors duration-300"
+    class="h-[68px] flex shadow-sm fixed top-0 left-0 w-full z-50 transition-colors duration-300"
     @scroll="onScroll"
   >
     <PageContainer class="flex-1 flex items-center">
