@@ -287,7 +287,6 @@ export const getRooms = () => {
             price: 550,
             size: 75,
             bedType: "King",
-            bathroom: "shower",
             occupancy: 4,
             view: "Panoramic View",
             cancellationPolicy: "Free cancellation up to 72 hours before check-in",

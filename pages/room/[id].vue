@@ -31,16 +31,17 @@ const goToDetailRoom = (id: number) => {
           :alt="item.room"
           class="w-full h-[800px] rounded-lg drop-shadow-lg	"
       />
-      <h2 class="text-3xl font-bold mx-auto text-lime-600 my-3 py-2 px-3 border-b-4 border-gray-500 inline-block">
-        {{ item.room }}</h2>
+      <h2 class="text-3xl font-bold mx-auto text-lime-600 my-3 py-2 px-3 border-b-4 border-gray-300 dark:border-gray-500 inline-block">
+        {{ item.room }}
+      </h2>
     </div>
 
     <div class="flex gap-8 mt-4 w-full">
       <div class="w-1/3">
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+        <div class="bg-gray-50 dark:bg-gray-800 dark:rounded-lg dark:shadow-lg overflow-hidden">
           <ul class="p-8">
             <li
-                :class="`text-xl font-light text-gray-300 uppercase tracking-widest border-b border-gray-700 py-5 relative group cursor-pointer ${activeComponent === 'overview' ? 'text-lime-600' : ''}`"
+                :class="`text-xl font-light dark:text-gray-300 uppercase tracking-widest border-b dark:border-gray-700 py-5 relative group cursor-pointer ${activeComponent === 'overview' ? 'text-lime-600' : ''}`"
                 @click="setActiveComponent('overview')"
             >
               Overview
@@ -50,7 +51,7 @@ const goToDetailRoom = (id: number) => {
             </li>
 
             <li
-                :class="`text-xl font-light text-gray-300 uppercase tracking-widest border-b border-gray-700 py-5 relative group cursor-pointer ${activeComponent === 'amenities' ? 'text-lime-600' : ''}`"
+                :class="`text-xl font-light dark:text-gray-300 uppercase tracking-widest border-b dark:border-gray-700 py-5 relative group cursor-pointer ${activeComponent === 'amenities' ? 'text-lime-600' : ''}`"
                 @click="setActiveComponent('amenities')"
             >
               Amenities
@@ -60,7 +61,7 @@ const goToDetailRoom = (id: number) => {
             </li>
 
             <li
-                :class="`text-xl font-light text-gray-300 uppercase tracking-widest border-b border-gray-700 py-5 relative group cursor-pointer ${activeComponent === 'bookNow' ? 'text-lime-600' : ''}`"
+                :class="`text-xl font-light dark:text-gray-300 uppercase tracking-widest border-b dark:border-gray-700 py-5 relative group cursor-pointer ${activeComponent === 'bookNow' ? 'text-lime-600' : ''}`"
                 @click="setActiveComponent('bookNow')"
             >
               Book Now
@@ -79,8 +80,8 @@ const goToDetailRoom = (id: number) => {
     </div>
 
     <div class="flex flex-col mt-12">
-      <h2 class="text-3xl font-bold mx-auto text-lime-600 py-2 px-3 border-b-4 border-gray-500 inline-block">
-        More <span class="text-gray-50">Rooms</span>
+      <h2 class="text-3xl font-bold mx-auto text-lime-500 dark:text-lime-600 py-2 px-3 border-b-4 border-gray-500 inline-block">
+        More <span class="text-gray-950 dark:text-gray-50">Rooms</span>
       </h2>
       <div class="grid grid-cols-6 gap-8 my-8">
         <div

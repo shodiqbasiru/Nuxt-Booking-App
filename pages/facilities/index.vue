@@ -15,13 +15,13 @@ const goToFacility = (slug: string) => {
   <div class="flex flex-col relative">
     <PageContainer class="my-20 py-20">
       <div class="bg-image absolute inset-0 opacity-75 dark:opacity-20"></div>
-      <h1 class="text-4xl font-bold text-center mb-8">
+      <h1 class="text-4xl font-bold text-center mb-8 relative">
         Our
         <span class="text-lime-500 dark:text-lime-600">
         Facilities
       </span>
       </h1>
-      <div class="grid grid-cols-4 gap-4">
+      <div class="grid grid-cols-4 gap-4 relative">
         <div
             class="relative overflow-hidden rounded-lg group cursor-pointer"
             v-for="facility in facilities"

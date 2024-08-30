@@ -24,8 +24,8 @@ const goToFacility = (slug: string) => {
     <PageContainer class="flex flex-col">
      <div class="relative overflow-hidden mb-8">
       <div class="flex items-center justify-center">
-        <h1 class="text-3xl font-bold mx-auto text-lime-600 py-2 px-3 border-b-4 border-gray-500 inline-block mb-8">
-          {{ title }} <span class="text-gray-50">{{ restOfTitle }}</span>
+        <h1 class="text-3xl font-bold mx-auto text-lime-500 dark:text-lime-600 py-2 px-3 border-b-4 dark:border-gray-500 inline-block mb-8">
+          {{ title }} <span class="text-gray-950 dark:text-gray-50">{{ restOfTitle }}</span>
         </h1>
       </div>
        <div class="relative rounded-lg overflow-hidden mb-8">
@@ -34,14 +34,14 @@ const goToFacility = (slug: string) => {
              :alt="facility.name"
              class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-75 hover:brightness-100 rounded-lg cursor-pointer"/>
        </div>
-       <p class="text-lg text-gray-200">
+       <p class="text-lg dark:text-gray-200">
          {{ facility.description }}
        </p>
      </div>
       <div>
         <div class="flex items-center justify-center">
-          <h1 class="text-3xl font-bold mx-auto text-lime-600 py-2 px-3 border-b-4 border-gray-500 inline-block mb-8">
-            Other <span class="text-gray-50">Facilities</span>
+          <h1 class="text-3xl font-bold mx-auto text-lime-500 dark:text-lime-600 py-2 px-3 border-b-4 dark:border-gray-500 inline-block mb-8">
+            Other <span class="text-gray-950 dark:text-gray-50">Facilities</span>
           </h1>
         </div>
 

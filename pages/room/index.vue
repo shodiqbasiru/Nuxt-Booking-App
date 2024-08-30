@@ -16,8 +16,8 @@ const goToDetailRoom = (id: number) => {
 
     <PageContainer class="name my-8 relative">
       <div class="flex items-center justify-center">
-        <h1 class="text-3xl font-bold mx-auto text-lime-600 py-2 px-3 border-b-4 border-gray-500 inline-block mb-8">
-          Our <span class="text-gray-50">Rooms</span>
+        <h1 class="text-3xl font-bold mx-auto text-lime-500 dark:text-lime-600 py-2 px-3 border-b-4 border-gray-300 dark:border-gray-500 inline-block mb-8">
+          Our <span class="text-gray-950 dark:text-gray-50">Rooms</span>
         </h1>
       </div>
       <div class="grid grid-cols-6 gap-8 mx-56">

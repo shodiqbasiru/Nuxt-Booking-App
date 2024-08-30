@@ -13,7 +13,6 @@
       <slot />
     </main>
 
-
     <LayoutFooterDefault />
   </div>
 </template>

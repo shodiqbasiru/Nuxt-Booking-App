@@ -33,7 +33,7 @@
           </div>
           <div class="mt-4 min-h-[50px]">
             <NuxtLink
-              to="/rooms"
+              to="/room"
               class="mt-4 text-lime-500 dark:text-lime-600 font-bold rounded-lg underline hover:text-gray-900 dark:hover:text-gray-200 transition-colors float-start lg:float-end"
               >View Rooms</NuxtLink
             >
@@ -58,7 +58,7 @@
           </div>
           <div class="mt-4 min-h-[50px]">
             <NuxtLink
-              to="/swimming-pool"
+              to="/facilities/swimming-pool"
               class="mt-4 text-lime-500 dark:text-lime-600 font-bold rounded-lg underline hover:text-gray-900 dark:hover:text-gray-200 transition-colors float-start lg:float-end"
               >View Pool</NuxtLink
             >
@@ -83,7 +83,7 @@
           </div>
           <div class="mt-4 min-h-[50px]">
             <NuxtLink
-              to="/restaurant"
+              to="/facilities/restaurant"
               class="mt-4 text-lime-500 dark:text-lime-600 font-bold rounded-lg underline hover:text-gray-900 dark:hover:text-gray-200 transition-colors float-start lg:float-end"
               >View Restaurant</NuxtLink
             >

@@ -15,8 +15,8 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.entertainment" :key="item.id" class="ms-4 text-gray-300 text-lg leading-relaxed">
-            <span class="text-gray-50">{{ data }}</span>
+          <li v-for="data in item?.entertainment" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
+            <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
       </div>
@@ -28,8 +28,8 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.roomFeatures" :key="item.id" class="ms-4 text-gray-300 text-lg leading-relaxed">
-            <span class="text-gray-50">{{ data }}</span>
+          <li v-for="data in item?.roomFeatures" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
+            <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
       </div>
@@ -41,8 +41,8 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.mealPlan" :key="item.id" class="ms-4 text-gray-300 text-lg leading-relaxed">
-            <span class="text-gray-50">{{ data }}</span>
+          <li v-for="data in item?.mealPlan" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
+            <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
       </div>
@@ -55,7 +55,7 @@ const {item} = props;
       <div class="py-4">
         <ul class="list-disc">
           <li v-for="data in item?.services" :key="item.id" class="ms-4 text-lg leading-relaxed">
-            <span class="text-gray-50">{{ data }}</span>
+            <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
       </div>
@@ -68,7 +68,7 @@ const {item} = props;
       <div class="py-4">
         <ul class="list-disc">
           <li v-for="data in item?.bathroom" :key="item.id" class="ms-4 text-lg leading-relaxed">
-            <span class="text-gray-50">{{ data }}</span>
+            <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
       </div>
