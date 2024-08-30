@@ -21,6 +21,7 @@ export const getRooms = () => {
         {
             id: 1,
             room: "Deluxe Room",
+            slug: "deluxe-room",
             src: Room1,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -55,6 +56,7 @@ export const getRooms = () => {
         {
             id: 2,
             room: "Deluxe Balcony Room",
+            slug: "deluxe-balcony-room",
             src: Room2,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -89,6 +91,7 @@ export const getRooms = () => {
         {
             id: 3,
             room: "Superior Room",
+            slug: "superior-room",
             src: Room3,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -124,6 +127,7 @@ export const getRooms = () => {
         {
             id: 4,
             room: "Studio Room",
+            slug: "studio-room",
             src: Room4,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -160,6 +164,7 @@ export const getRooms = () => {
         {
             id: 5,
             room: "Premier Room",
+            slug: "premier-room",
             src: Room5,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -198,6 +203,7 @@ export const getRooms = () => {
         {
             id: 6,
             room: "Premier Balcony Room",
+            slug: "premier-balcony-room",
             src: Room6,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -237,6 +243,7 @@ export const getRooms = () => {
         {
             id: 7,
             room: "Family Suite",
+            slug: "family-suite",
             src: Room7,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",
@@ -281,6 +288,7 @@ export const getRooms = () => {
         {
             id: 8,
             room: "Gallery Suite",
+            slug: "gallery-suite",
             src: Room8,
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.",

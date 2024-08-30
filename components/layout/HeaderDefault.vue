@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import {getFacilities} from "~/data/data";
+import {getFacilities, getRooms} from "~/data/data";
 
 const menu = ref<Boolean>(false);
 const isScrolled = ref<Boolean>(false);
-const isHovered = ref<Boolean>(false);
+const isRoomHovered = ref<Boolean>(false);
+const isFacilityHovered = ref<Boolean>(false);
 
-const items = getFacilities();
+const facilityItems = getFacilities();
+const roomItems = getRooms();
 
 const toggleMenu = () => {
   menu.value = !menu.value;
@@ -15,12 +17,20 @@ const onScroll = () => {
   isScrolled.value = window.scrollY > 0;
 };
 
-const handleHover = () => {
-  isHovered.value = true;
+const handleRoomHover = () => {
+  isRoomHovered.value = true;
 };
 
-const handleLeave = () => {
-  isHovered.value = false;
+const handleRoomLeave = () => {
+  isRoomHovered.value = false;
+};
+
+const handleFacilityHover = () => {
+  isFacilityHovered.value = true;
+};
+
+const handleFacilityLeave = () => {
+  isFacilityHovered.value = false;
 };
 
 onMounted(() => {
@@ -59,14 +69,17 @@ onUnmounted(() => {
           <NuxtLink to="/room" class="hover:text-lime-500 py-4">Rooms</NuxtLink>
           <NuxtLink
               to="/facilities" class="hover:text-lime-500 py-4"
-          >Facilities
+          >
+            Facilities
           </NuxtLink>
           <NuxtLink to="/about-us" class="hover:text-lime-500 py-4"
-          >About
+          >
+            About
           </NuxtLink
           >
           <NuxtLink to="/contact" class="hover:text-lime-500 py-4"
-          >Contact
+          >
+            Contact
           </NuxtLink
           >
           <AppToggleTheme/>
@@ -76,17 +89,33 @@ onUnmounted(() => {
           class="hidden md:flex flex-1 justify-end items-center space-x-2 xl:space-x-8 uppercase tracking-wider text-lg lg:text-xl font-light"
       >
         <NuxtLink to="/" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">Home</NuxtLink>
-        <NuxtLink to="/room" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">Rooms</NuxtLink>
+        <div class="relative">
+          <NuxtLink
+              to="/room"
+              class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"
+              @mouseenter="handleRoomHover"
+              @mouseleave="handleRoomLeave"
+          >
+            Rooms
+          </NuxtLink>
+          <AppDropdown
+              path-name="room"
+              :items="roomItems"
+              v-if="isRoomHovered"
+              @mouseenter="handleRoomHover"
+              @mouseleave="handleRoomLeave"/>
+        </div>
         <div class="relative">
           <NuxtLink
               to="/facilities"
               class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"
-              @mouseenter="handleHover"
-              @mouseleave="handleLeave"
+              @mouseenter="handleFacilityHover"
+              @mouseleave="handleFacilityLeave"
           >
             Facilities
           </NuxtLink>
-          <AppDropdown :items="items" v-if="isHovered" @mouseenter="handleHover" @mouseleave="handleLeave" />
+          <AppDropdown path-name="facilities" :items="facilityItems" v-if="isFacilityHovered" @mouseenter="handleFacilityHover"
+                       @mouseleave="handleFacilityLeave"/>
         </div>
         <NuxtLink to="/about-us" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">About</NuxtLink>
         <NuxtLink to="/contact" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"

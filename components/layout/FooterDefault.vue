@@ -14,7 +14,7 @@
         <div class="col-span-3 lg:col-span-1">
           <h2 class="text-xl font-bold text-gray-50">Explore</h2>
 
-          <ul class="mt-4 space-y-2">
+          <ul class="mt-4 flex gap-4">
             <li>
               <NuxtLink to="/pages/about-us" class="hover:text-lime-500"
               >About
@@ -49,19 +49,19 @@
           <div class="text-gray-400 flex items-center space-x-2">
             <Icon
                 name="material-symbols:location-city"
-                class="w-6 h-6 inline-block"
+                class="w-6 h-6 inline-block text-lime-500"
             />
             <span>Jl. Lorem Ipsum Dolor Sit Amet</span>
           </div>
           <div class="text-gray-400 flex items-center space-x-2">
             <Icon
                 name="material-symbols:phone-enabled-sharp"
-                class="w-6 h-6 inline-block"
+                class="w-6 h-6 inline-block text-lime-500"
             />
             <span>+62 123 456 789</span>
           </div>
           <div class="text-gray-400 flex items-center space-x-2">
-            <Icon name="material-symbols:mail" class="w-6 h-6 inline-block"/>
+            <Icon name="material-symbols:mail" class="w-6 h-6 inline-block text-lime-500"/>
             <span> hanabass@gmail.com </span>
           </div>
         </div>

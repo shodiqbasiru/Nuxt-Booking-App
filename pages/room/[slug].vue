@@ -7,10 +7,10 @@ const activeComponent = ref<string>('overview');
 const route = useRoute();
 const rooms = getRooms();
 
-const {id} = route.params;
+const {slug} = route.params;
 
-const item = rooms.find(room => room.id === Number(id));
-const currentRooms = rooms.filter(room => room.id !== Number(id));
+const item = rooms.find(room => room.slug === slug);
+const currentRooms = rooms.filter(room => room.slug !== slug);
 
 const router = useRouter();
 
@@ -18,8 +18,8 @@ const setActiveComponent = (component: string) => {
   activeComponent.value = component;
 };
 
-const goToDetailRoom = (id: number) => {
-  router.push(`/room/${id}`);
+const goToDetailRoom = (slug: string) => {
+  router.push(`/room/${slug}`);
 };
 </script>
 
@@ -87,7 +87,7 @@ const goToDetailRoom = (id: number) => {
         <div
             class="col-span-3 rounded-lg shadow-lg overflow-hidden cursor-pointer"
             v-for="item in currentRooms" :key="item.id"
-            @click="goToDetailRoom(item.id)"
+            @click="goToDetailRoom(item.slug)"
         >
           <div class="flex flex-col">
             <div class="relative overflow-hidden">
