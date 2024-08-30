@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="relative pt-24 pb-8 lg:py-24 min-h-screen">
+  <div class="pt-24 pb-8 lg:py-24 min-h-screen">
     <PageContainer class="grid grid-cols-6 lg:grid-cols-5 gap-8 px-4 lg:px-0">
       <div class="bg-image absolute inset-0 opacity-75 dark:opacity-20"></div>
 
@@ -82,7 +82,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .bg-image {
   background-image: url("~/assets/images/hotel-4.jpg");
   background-size: cover;

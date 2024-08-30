@@ -6,6 +6,14 @@ import Room5 from "~/assets/images/room-5.jpg";
 import Room6 from "~/assets/images/room-6.jpeg";
 import Room7 from "~/assets/images/room-7.jpg";
 import Room8 from "~/assets/images/room-8.jpg";
+import Facility1 from "~/assets/images/sp.jpg";
+import Facility2 from "~/assets/images/rh.jpg";
+import Facility3 from "~/assets/images/gym.jpg";
+import Facility4 from "~/assets/images/billiard.jpg";
+import Facility5 from "~/assets/images/meeting.jpg";
+import Facility6 from "~/assets/images/business-center.jpg";
+import Facility7 from "~/assets/images/adventure-kids.jpg";
+import Facility8 from "~/assets/images/spa.jpg";
 
 
 export const getRooms = () => {
@@ -319,3 +327,80 @@ export const getRooms = () => {
     ]
 
 };
+
+export const getFacilities = () => {
+    return [
+        {
+            id: 1,
+            name: "Swimming Pool",
+            slug: "swimming-pool",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility1
+        },
+        {
+            id:2,
+            name: "Restaurant & Bar",
+            slug: "restaurant-bar",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility2
+        },
+        {
+            id: 3,
+            name: "Spa & Wellness",
+            slug: "spa-wellness",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility8
+        },
+        {
+            id: 4,
+            name: "Fitness Center",
+            slug: "fitness-center",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility3
+        },
+        {
+            id: 5,
+            name: "Meeting Room",
+            slug: "meeting-room",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility5
+        },
+        {
+            id: 6,
+            name: "Business Center",
+            slug: "business-center",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility6
+        },
+        {
+            id: 7,
+            name: "Billiard Room",
+            slug: "billiard-room",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility4
+        },
+        {
+            id: 8,
+            name: "Kids Adventure Club",
+            slug: "kids-adventure-club",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien.`,
+            url: Facility7
+        }
+    ]
+}

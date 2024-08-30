@@ -31,7 +31,7 @@ const goToDetailRoom = (id: number) => {
           :alt="item.room"
           class="w-full h-[800px] rounded-lg drop-shadow-lg	"
       />
-      <h2 class="text-3xl font-bold mx-auto text-lime-600 my-3 py-2 px-3 border-b-4 border-gray-800 inline-block">
+      <h2 class="text-3xl font-bold mx-auto text-lime-600 my-3 py-2 px-3 border-b-4 border-gray-500 inline-block">
         {{ item.room }}</h2>
     </div>
 
@@ -72,14 +72,14 @@ const goToDetailRoom = (id: number) => {
         </div>
       </div>
       <div class="flex-1">
-        <RoomOverview v-if="activeComponent === 'overview'" :item="item" />
-        <RoomAmenities v-if="activeComponent === 'amenities'" :item="item" />
-        <RoomBooking v-if="activeComponent === 'bookNow'" />
+        <RoomOverview v-if="activeComponent === 'overview'" :item="item"/>
+        <RoomAmenities v-if="activeComponent === 'amenities'" :item="item"/>
+        <RoomBooking v-if="activeComponent === 'bookNow'"/>
       </div>
     </div>
 
     <div class="flex flex-col mt-12">
-      <h2 class="text-3xl font-bold mx-auto text-lime-600 py-2 px-3 border-b-4 border-gray-800 inline-block">
+      <h2 class="text-3xl font-bold mx-auto text-lime-600 py-2 px-3 border-b-4 border-gray-500 inline-block">
         More <span class="text-gray-50">Rooms</span>
       </h2>
       <div class="grid grid-cols-6 gap-8 my-8">
