@@ -1,18 +1,22 @@
 <script lang="ts" setup>
-import { getRooms } from '~/data/data';
+import {useRoom} from "~/composables/useRoom";
 
-const rooms = getRooms();
+const {data: {rooms}, methods: {fetchRooms}} = useRoom();
 const router = useRouter();
 
-const goToDetailRoom = (id: number) => {
-  router.push(`/room/${id}`);
+const goToDetailRoom = (slug: string) => {
+  router.push(`/room/${slug}`);
 };
+
+onMounted(() => {
+  fetchRooms();
+});
 </script>
 
 
 <template>
   <div class="min-h-screen">
-    <AppSlider />
+    <AppSlider/>
 
     <PageContainer class="name my-8 relative">
       <div class="flex items-center justify-center">
@@ -22,20 +26,20 @@ const goToDetailRoom = (id: number) => {
       </div>
       <div class="grid grid-cols-6 gap-8 mx-56">
         <div
-          class="col-span-3 rounded-lg shadow-lg overflow-hidden cursor-pointer"
-          v-for="item in rooms" :key="item.id"
-          @click="goToDetailRoom(item.id)"
+            class="col-span-3 rounded-lg shadow-lg overflow-hidden cursor-pointer"
+            v-for="item in rooms" :key="item.id"
+            @click="goToDetailRoom(item.slug)"
         >
           <div class="flex flex-col">
             <div class="relative overflow-hidden">
               <img
-                :src="item.src"
-                :alt="item.room"
-                class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-75 hover:brightness-100 rounded-lg"
+                  :src="item.url"
+                  :alt="item.room"
+                  class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-75 hover:brightness-100 rounded-lg"
               />
             </div>
             <div class="p-4">
-              <h2 class="text-2xl font-bold text-center">{{item.room}}</h2>
+              <h2 class="text-2xl font-bold text-center">{{ item.room }}</h2>
             </div>
           </div>
         </div>

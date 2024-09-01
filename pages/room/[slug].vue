@@ -1,18 +1,22 @@
 <script lang="ts" setup>
 
-import {getRooms} from "~/data/data";
+import {useRoom} from "~/composables/useRoom";
+import type {IRoom} from "~/data/types";
 
 const activeComponent = ref<string>('overview');
+const item = ref<IRoom | undefined>();
 
 const route = useRoute();
-const rooms = getRooms();
+const router = useRouter();
+const {data: {rooms}, methods: {fetchRooms}} = useRoom();
 
 const {slug} = route.params;
 
-const item = rooms.find(room => room.slug === slug);
-const currentRooms = rooms.filter(room => room.slug !== slug);
+const currentRoom = computed(() => rooms.find(room => room.slug === slug));
+const currentRooms = computed(() => rooms.filter(room => room.slug !== slug));
 
-const router = useRouter();
+await fetchRooms();
+item.value = currentRoom.value;
 
 const setActiveComponent = (component: string) => {
   activeComponent.value = component;
@@ -27,7 +31,7 @@ const goToDetailRoom = (slug: string) => {
   <PageContainer class="flex flex-col items-center min-h-screen mt-24">
     <div class="relative flex flex-col items-center overflow-hidden">
       <img
-          :src="item.src"
+          :src="item.url"
           :alt="item.room"
           class="w-full h-[800px] rounded-lg drop-shadow-lg	"
       />
@@ -92,7 +96,7 @@ const goToDetailRoom = (slug: string) => {
           <div class="flex flex-col">
             <div class="relative overflow-hidden">
               <img
-                  :src="item.src"
+                  :src="item.url"
                   :alt="item.room"
                   class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-75 hover:brightness-100 rounded-lg"
               />
