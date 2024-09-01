@@ -7,7 +7,7 @@ const props = defineProps({
 const bathroom = ref<string>();
 const {item} = props;
 
-item.bathroom.map((bath: string) => bathroom.value === undefined ? bathroom.value = bath : bathroom.value += `, ${bath}`);
+item.amenity.bathroom.map((bath: string) => bathroom.value === undefined ? bathroom.value = bath : bathroom.value += `, ${bath}`);
 </script>
 
 <template>
@@ -50,6 +50,10 @@ item.bathroom.map((bath: string) => bathroom.value === undefined ? bathroom.valu
       <div class="grid grid-cols-3 items-center border-b dark:border-gray-800 py-4">
         <span class="col-span-1 dark:text-gray-300">Size</span>
         <span class="col-span-2 text-gray-500 dark:text-gray-100 ml-2 capitalize">: {{ item.size }} Sqft</span>
+      </div>
+      <div class="grid grid-cols-3 items-center border-b dark:border-gray-800 py-4">
+        <span class="col-span-1 dark:text-gray-300">Number Of Rooms</span>
+        <span class="col-span-2 text-gray-500 dark:text-gray-100 ml-2 capitalize">: {{ item.numberOfRooms }} rooms</span>
       </div>
       <div class="grid grid-cols-3 items-center border-b dark:border-gray-800 py-4">
         <span class="col-span-1 dark:text-gray-300">View</span>

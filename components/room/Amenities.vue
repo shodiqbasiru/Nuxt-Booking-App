@@ -15,7 +15,7 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.entertainment" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
+          <li v-for="data in item?.amenity.entertainment" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
             <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
@@ -28,7 +28,7 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.roomFeatures" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
+          <li v-for="data in item?.amenity.roomFeatures" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
             <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
@@ -41,7 +41,7 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.mealPlan" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
+          <li v-for="data in item?.amenity.mealPlan" :key="item.id" class="ms-4 dark:text-gray-300 text-lg leading-relaxed">
             <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
@@ -54,7 +54,7 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.services" :key="item.id" class="ms-4 text-lg leading-relaxed">
+          <li v-for="data in item?.amenity.services" :key="item.id" class="ms-4 text-lg leading-relaxed">
             <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
@@ -67,7 +67,7 @@ const {item} = props;
       </h2>
       <div class="py-4">
         <ul class="list-disc">
-          <li v-for="data in item?.bathroom" :key="item.id" class="ms-4 text-lg leading-relaxed">
+          <li v-for="data in item?.amenity.bathroom" :key="item.id" class="ms-4 text-lg leading-relaxed">
             <span class="capitalize text-gray-700 dark:text-gray-50">{{ data }}</span>
           </li>
         </ul>
