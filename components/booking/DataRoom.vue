@@ -3,6 +3,12 @@
 import type {IRoom} from "~/data/types";
 
 defineProps<{ rooms: IRoom[] }>();
+
+const navigate = (slug:string) => {
+  return navigateTo({
+    path: `/booking-room/proceed-${slug}`
+  })
+}
 </script>
 
 <template>
@@ -135,6 +141,7 @@ defineProps<{ rooms: IRoom[] }>();
                   size="sm"
                   variant="primary"
                   transform="uppercase"
+                  @click="navigate(item.slug)"
               />
               <AppButton
                   label="View Detail"
