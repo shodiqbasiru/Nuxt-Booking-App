@@ -28,7 +28,7 @@ const goToFacility = (slug: string) => {
             :key="facility.id"
             @click="goToFacility(facility.slug)">
           <img :src="facility.url" :alt="facility.name"
-               class="w-full h-[300px] rounded-lg object-cover brightness-75 transition-all duration-300 group-hover:brightness-50"/>
+               class="w-full h-[300px] rounded-lg object-cover transition-all duration-300 brightness-100 dark:brightness-75 group-hover:brightness-50 dark:group-hover:brightness-100"/>
           <p class="text-center absolute inset-0 flex items-center justify-center text-2xl font-bold text-white uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             {{ facility.name }}
           </p>

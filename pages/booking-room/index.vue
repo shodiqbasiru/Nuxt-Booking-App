@@ -68,7 +68,7 @@ watch(
         <h1 class="text-3xl font-bold mx-auto text-lime-500 dark:text-lime-600 py-2 px-3 border-b-4 dark:border-gray-500 inline-block mb-8">
           Booking <span class="text-gray-950 dark:text-gray-50">Room</span>
         </h1>
-        <div class="flex gap-8 mt-4">
+        <div class="flex lg:flex-row flex-col gap-8 mt-4">
           <div>
             <form @submit="handleSearch" class="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
               <div class="grid grid-cols-2 gap-4">
@@ -100,7 +100,7 @@ watch(
                     class="w-full p-2 bg-gray-50 dark:bg-gray-800 border border-gray-700 rounded-lg dark:text-gray-100"
                 />
               </div>
-              <div class="mt-4 flex gap-8">
+              <div class="mt-4 flex md:flex-row flex-col md:gap-8 gap-3">
                 <AppButton
                     label="Search"
                     variant="primary"

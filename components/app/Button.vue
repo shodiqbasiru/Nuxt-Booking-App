@@ -33,11 +33,14 @@ const sizeClasses: any = {
 };
 
 const variantClasses: any = {
-  primary: `bg-lime-500 dark:bg-lime-600 hover:bg-lime-500 dark:hover:bg-lime-700 text-gray-900 dark:text-gray-50`,
-  secondary: `bg-gray-50 hover:bg-gray-500 text-black`,
-  secondaryOutline: `bg-transparent border border-gray-50 hover:bg-gray-50 text-gray-50 hover:text-gray-950`,
+  primary: `bg-lime-500 dark:bg-lime-600 hover:bg-lime-600 dark:hover:bg-lime-700 text-white`,
+  primaryOutline: `bg-transparent border border-lime-500 dark:border-lime-600 hover:text-white hover:bg-lime-500 dark:hover:bg-lime-600 text-lime-500 dark:text-lime-600`,
+  secondary: `bg-gray-200 hover:bg-gray-200 dark:hover:bg-gray-300 text-gray-950`,
+  secondaryOutline: `bg-transparent border border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-800`,
   accent: `bg-amber-200 hover:bg-amber-300 text-black`,
+  accentOutline: `bg-transparent border border-amber-200 hover:bg-amber-200 text-amber-200`,
   danger: `bg-red-500 hover:bg-red-600 text-gray-50`,
+  dangerOutline: `bg-transparent border border-red-500 hover:bg-red-500 text-red-500`,
 };
 
 const textTransform: any = {

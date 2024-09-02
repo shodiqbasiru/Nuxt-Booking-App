@@ -11,6 +11,7 @@
     <!-- main -->
     <main class="flex-1 relative">
       <slot />
+      <AppToggleTheme />
     </main>
 
     <LayoutFooterDefault />

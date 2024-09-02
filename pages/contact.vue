@@ -11,7 +11,7 @@
         </h1>
       </div>
 
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid lg:grid-cols-2 grid-cols-1 gap-8">
         <div class="flex flex-col">
           <h3 class="text-2xl text-lime-500 dark:text-lime-600 font-light uppercase mb-3">
             Contact Information

@@ -46,18 +46,18 @@ onUnmounted(() => {
   <header
       :class="{
       'border-b border-gray-200/50 dark:border-gray-800/50 bg-gray-50 dark:bg-gray-950 shadow-sm': isScrolled,
-      'bg-transparent text-gray-50': !isScrolled,
+      'bg-transparent text-gray-950 dark:text-gray-50': !isScrolled,
     }"
       class="h-[68px] flex fixed top-0 left-0 w-full z-50 transition-colors duration-300"
       @scroll="onScroll"
   >
     <PageContainer class="flex-1 flex items-center">
-      <div class="flex justify-between items-center max-w-sm w-full">
+      <div class="flex justify-between items-center w-full">
         <NuxtLink to="/" class="font-extrabold text-4xl text-gray-950 dark:text-gray-50"
         >Hana<span class="text-lime-500">Bass</span></NuxtLink
         >
         <button class="flex items-center md:hidden" @click="toggleMenu">
-          <Icon name="ci:hamburger" class="p-4 text-lime-500"/>
+          <Icon name="ci:hamburger" class="p-4 text-gray-950 dark:text-gray-50"/>
         </button>
       </div>
       <transition name="slide-down">
@@ -82,17 +82,16 @@ onUnmounted(() => {
             Contact
           </NuxtLink
           >
-          <AppToggleTheme/>
         </nav>
       </transition>
       <nav
-          class="hidden md:flex flex-1 justify-end items-center space-x-2 xl:space-x-8 uppercase tracking-wider text-lg lg:text-xl font-light"
+          class="hidden md:flex flex-1 justify-end items-center space-x-8 xl:space-x-10 uppercase tracking-wider text-lg lg:text-xl font-light"
       >
-        <NuxtLink to="/" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">Home</NuxtLink>
+        <NuxtLink to="/" class="hover:text-lime-500 text-gray-950 dark:text-gray-50 py-4">Home</NuxtLink>
         <div class="relative">
           <NuxtLink
               to="/room"
-              class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"
+              class="hover:text-lime-500 text-gray-950 dark:text-gray-50 py-4"
               @mouseenter="handleRoomHover"
               @mouseleave="handleRoomLeave"
           >
@@ -108,7 +107,7 @@ onUnmounted(() => {
         <div class="relative">
           <NuxtLink
               to="/facilities"
-              class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"
+              class="hover:text-lime-500 text-gray-950 dark:text-gray-50 py-4"
               @mouseenter="handleFacilityHover"
               @mouseleave="handleFacilityLeave"
           >
@@ -117,13 +116,11 @@ onUnmounted(() => {
           <AppDropdown path-name="facilities" :items="facilityItems" v-if="isFacilityHovered" @mouseenter="handleFacilityHover"
                        @mouseleave="handleFacilityLeave"/>
         </div>
-        <NuxtLink to="/about-us" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4">About</NuxtLink>
-        <NuxtLink to="/contact" class="hover:text-lime-500 text-lime-500 dark:text-gray-50 py-4"
+        <NuxtLink to="/about-us" class="hover:text-lime-500 text-gray-950 dark:text-gray-50 py-4">About</NuxtLink>
+        <NuxtLink to="/contact" class="hover:text-lime-500 text-gray-950 dark:text-gray-50 py-4"
         >Contact
         </NuxtLink
         >
-
-        <AppToggleTheme/>
       </nav>
     </PageContainer>
   </header>

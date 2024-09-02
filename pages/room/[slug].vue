@@ -98,7 +98,7 @@ const goToDetailRoom = (slug: string) => {
               <img
                   :src="item.url"
                   :alt="item.room"
-                  class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-75 hover:brightness-100 rounded-lg"
+                  class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-100 dark:brightness-75 hover:brightness-125 dark:hover:brightness-100 rounded-lg"
               />
             </div>
             <div class="p-4">

@@ -32,7 +32,7 @@ const goToFacility = (slug: string) => {
          <img
              :src="facility.url"
              :alt="facility.name"
-             class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-75 hover:brightness-100 rounded-lg cursor-pointer"/>
+             class="w-full h-[500px] object-cover hover:scale-110 transition-all duration-500 ease-in-out brightness-100 dark:brightness-75 hover:brightness-125 dark:hover:brightness-100 rounded-lg cursor-pointer"/>
        </div>
        <p class="text-lg dark:text-gray-200">
          {{ facility.description }}
@@ -52,7 +52,7 @@ const goToFacility = (slug: string) => {
               :key="facility.id"
               @click="goToFacility(facility.slug)">
             <img :src="facility.url" :alt="facility.name"
-                 class="w-full h-[300px] rounded-lg object-cover brightness-75 transition-all duration-300 group-hover:brightness-50"/>
+                 class="w-full h-[300px] rounded-lg object-cover transition-all duration-300 duration-300 brightness-100 dark:brightness-75 group-hover:brightness-50 dark:group-hover:brightness-100"/>
             <p class="text-center absolute inset-0 flex items-center justify-center text-2xl font-bold text-white uppercase opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {{ facility.name }}
             </p>

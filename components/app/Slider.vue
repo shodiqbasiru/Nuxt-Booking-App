@@ -98,7 +98,7 @@ const goToNextSlide = () => {
           <img
             :src="image.src"
             :alt="image.room"
-            class="w-full object-cover h-[900px]"
+            class="w-full object-cover h-[900px] brightness-100 dark:brightness-75 hover:brightness-125 dark:hover:brightness-100"
           />
           <div class="absolute inset-0 bg-black bg-opacity-10 dark:bg-opacity-40"></div>
           <div class="absolute inset-0 flex items-center justify-center">

@@ -18,7 +18,7 @@ const isDark = computed({
   <!--    <Icon name="material-symbols:dark-mode" size="sm" />-->
   <!--  </div>-->
   <span
-      class="cursor-pointer text-gray-950 dark:text-lime-500 flex items-center"
+      class="cursor-pointer text-gray-950 dark:text-lime-500 flex items-center bg-gray-200 dark:bg-gray-800 p-4 rounded-full fixed bottom-4 right-4 z-50 hover:bg-gray-300 dark:hover:bg-gray-700 shadow-2xl"
       @click="isDark = !isDark"
   >
           <Icon
