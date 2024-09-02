@@ -7,17 +7,13 @@ const props = defineProps({
   },
   size: {
     type: String,
-    default: "md", // default size
+    default: "md",
   },
   variant: {
     type: String,
-    default: "primary", // default variant
+    default: "primary",
   },
   transform: {
-    type: String,
-    default: null,
-  },
-  to: {
     type: String,
     default: null,
   },
@@ -41,6 +37,7 @@ const variantClasses: any = {
   secondary: `bg-gray-50 hover:bg-gray-500 text-black`,
   secondaryOutline: `bg-transparent border border-gray-50 hover:bg-gray-50 text-gray-50 hover:text-gray-950`,
   accent: `bg-amber-200 hover:bg-amber-300 text-black`,
+  danger: `bg-red-500 hover:bg-red-600 text-gray-50`,
 };
 
 const textTransform: any = {
@@ -55,17 +52,11 @@ const typeClasses: any = {
   reset: "reset",
 };
 
-const navigate = (path: string) => {
-  return navigateTo({
-    path: path,
-  });
-};
 </script>
 
 <template>
   <button
     :class="`${sizeClasses[size]} ${variantClasses[variant]} ${textTransform[transform]} font-semibold transition-colors`"
-    @click="navigate(to)"
     :type="typeClasses[type]"
   >
     {{ label }}
