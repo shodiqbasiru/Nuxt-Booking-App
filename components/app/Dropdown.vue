@@ -17,7 +17,7 @@ const {items, onHover, onLeave} = props;
   >
     <div v-for="item in items" :key="item.id" class="dark:bg-gray-800">
       <NuxtLink :to="`/${pathName}/${item.slug}`"
-                class="block p-4 text-sm text-gray-950 dark:text-gray-50 hover:bg-gray-50 capitalize cursor-pointer">{{ item.name ?? item.room }}
+                class="block p-4 text-sm text-gray-950 dark:text-gray-50 hover:bg-gray-200 dark:hover:bg-gray-900 capitalize cursor-pointer">{{ item.name ?? item.room }}
       </NuxtLink>
     </div>
   </div>
