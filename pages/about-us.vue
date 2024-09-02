@@ -10,7 +10,8 @@
           About <span class="text-gray-950 dark:text-gray-50">Us</span>
         </h1>
         <div>
-          <h3 class="text-2xl text-lime-500 dark:text-lime-600 font-light uppercase mb-3">
+          <h3 class="text-2xl text-lime-500 dark:text-lime-600 font-light uppercase mb-3
+">
             Maecenas sed diam eget.
           </h3>
           <p class="text-lg text-justify dark:text-gray-200">

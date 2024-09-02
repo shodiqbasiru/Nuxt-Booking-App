@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,11 +10,12 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@primevue/nuxt-module": "^4.0.5",
-    "@primevue/themes": "^4.0.5",
+    "add": "^2.0.6",
+    "date-fns": "^3.6.0",
     "nuxt": "^3.13.0",
     "nuxt-swiper": "^1.2.2",
     "primevue": "^4.0.5",
+    "sass": "^1.77.8",
     "vue": "latest"
   },
   "devDependencies": {

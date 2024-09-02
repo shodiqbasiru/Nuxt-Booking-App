@@ -16,6 +16,8 @@ export interface IRoom {
     amenity: IAmenity;
     numberOfRooms: number;
     roomNumber: number[];
+    availableFrom: string;
+    availableTo: string;
 }
 
 export interface IAmenity {

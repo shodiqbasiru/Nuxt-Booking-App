@@ -16,13 +16,13 @@
 
           <ul class="mt-4 flex gap-4">
             <li>
-              <NuxtLink to="/pages/about-us" class="hover:text-lime-500"
+              <NuxtLink to="/about-us" class="hover:text-lime-500"
               >About
               </NuxtLink
               >
             </li>
             <li>
-              <NuxtLink to="/pages/contact" class="hover:text-lime-500"
+              <NuxtLink to="/contact" class="hover:text-lime-500"
               >Contact
               </NuxtLink
               >

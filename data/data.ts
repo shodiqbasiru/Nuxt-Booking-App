@@ -57,7 +57,9 @@ export const getRooms = (): IRoom => {
                 ],
             },
             numberOfRooms: 5,
-            roomNumber: [101, 102, 103, 104, 105]
+            roomNumber: [101, 102, 103, 104, 105],
+            availableFrom: "2024-09-03",
+            availableTo: "2024-09-10"
         },
         {
             id: 2,
@@ -138,7 +140,9 @@ export const getRooms = (): IRoom => {
                 ],
             },
             numberOfRooms: 5,
-            roomNumber: [301, 302, 303, 304, 305]
+            roomNumber: [301, 302, 303, 304, 305],
+            availableFrom: "2024-09-03",
+            availableTo: "2024-09-10"
         },
         {
             id: 4,
@@ -180,7 +184,9 @@ export const getRooms = (): IRoom => {
                 ],
             },
             numberOfRooms: 5,
-            roomNumber: [401, 402, 403, 404, 405]
+            roomNumber: [401, 402, 403, 404, 405],
+            availableFrom: "2024-09-03",
+            availableTo: "2024-09-10"
         },
         {
             id: 5,
@@ -223,8 +229,10 @@ export const getRooms = (): IRoom => {
                     "Refrigerator",
                 ],
             },
-            numberOfRooms: 0,
-            roomNumber: [501, 502, 503, 504, 505]
+            numberOfRooms: 2,
+            roomNumber: [501, 502, 503, 504, 505],
+            availableFrom: "2024-09-06",
+            availableTo: "2024-09-10"
         },
         {
             id: 6,
@@ -269,7 +277,9 @@ export const getRooms = (): IRoom => {
                 ],
             },
             numberOfRooms: 3,
-            roomNumber: [601, 602, 603]
+            roomNumber: [601, 602, 603],
+            availableFrom: "2024-09-03",
+            availableTo: "2024-09-10"
         },
         {
             id: 7,
@@ -319,7 +329,9 @@ export const getRooms = (): IRoom => {
                 ],
             },
             numberOfRooms: 2,
-            roomNumber: [701, 702]
+            roomNumber: [701, 702],
+            availableFrom: "2024-09-03",
+            availableTo: "2024-09-10"
         },
         {
             id: 8,
@@ -370,10 +382,11 @@ export const getRooms = (): IRoom => {
                 ],
             },
             numberOfRooms: 2,
-            roomNumber: [801, 802]
+            roomNumber: [801, 802],
+            availableFrom: "2024-09-03",
+            availableTo: "2024-09-10"
         }
     ]
-
 };
 
 export const getFacilities = (): IFacility => {
