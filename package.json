@@ -1,7 +1,7 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,7 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "add": "^2.0.6",
+    "date-fns": "^3.6.0",
     "nuxt": "^3.13.0",
+    "nuxt-swiper": "^1.2.2",
+    "primevue": "^4.0.5",
+    "sass": "^1.77.8",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/icon": "^1.5.0",
+    "@nuxtjs/color-mode": "^3.4.4",
+    "@nuxtjs/tailwindcss": "^6.12.1"
   }
 }
