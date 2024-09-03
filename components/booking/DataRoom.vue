@@ -4,11 +4,29 @@ import type {IRoom} from "~/data/types";
 
 defineProps<{ rooms: IRoom[] }>();
 
-const navigate = (slug:string) => {
+const isShow = ref<Boolean>(false)
+const selectedRoom = ref<IRoom | null>(null);
+
+const router = useRouter();
+
+const navigate = (slug: string) => {
   return navigateTo({
     path: `/booking-room/proceed-${slug}`
   })
 }
+
+const handleOpenModal = (room:IRoom) => {
+  selectedRoom.value = room;
+  isShow.value = true
+  router.replace({query: {modal: 'room-detail-'+ room.slug}})
+}
+
+const handleCloseModal = () => {
+  isShow.value = false;
+  selectedRoom.value = null;
+  router.replace({query: {}})
+}
+
 </script>
 
 <template>
@@ -46,15 +64,14 @@ const navigate = (slug:string) => {
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-4 gap-8 md:divide-x divide-y divide-gray-200 dark:divide-gray-700 md:mt-0 mt-4">
+        <div
+            class="grid grid-cols-4 gap-8 md:divide-x md:divide-y-0 divide-y divide-gray-200 dark:divide-gray-700 md:mt-0 mt-4">
           <div class="md:col-span-2 col-span-4">
             <div class="grid grid-cols-4 mb-2">
               <div class="col-span-2">
                   <span class="flex items-center gap-2">
                     <Icon name="cbi:roomsbedroom" class="w-5 h-5 inline-block"/>
-                    <p class="text-sm dark:text-gray-300 font-light">
-                      Available Rooms
-                    </p>
+                    <p class="text-sm dark:text-gray-300 font-light">Available Rooms</p>
                   </span>
               </div>
               <div class="col-span-2">
@@ -148,6 +165,12 @@ const navigate = (slug:string) => {
                   size="sm"
                   variant="accent"
                   transform="uppercase"
+                  @click="handleOpenModal(item)"
+              />
+              <BookingRoomDetail
+                  :isShow="isShow"
+                  @closeModal="handleCloseModal"
+                  :room="selectedRoom"
               />
             </div>
           </div>
