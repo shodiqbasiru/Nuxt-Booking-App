@@ -1,6 +1,6 @@
 import Room1 from "~/assets/images/room-1.jpg";
 import Room2 from "~/assets/images/room-2.jpg";
-import Room3 from "~/assets/images/room-3.jpeg";
+import Room3 from "~/assets/images/room-3.jpg";
 import Room4 from "~/assets/images/room-4.jpg";
 import Room5 from "~/assets/images/room-5.jpg";
 import Room6 from "~/assets/images/room-6.jpeg";

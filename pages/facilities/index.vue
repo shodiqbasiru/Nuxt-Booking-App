@@ -1,10 +1,8 @@
 <script setup lang="ts">
 
-import {getFacilities} from "~/data/data";
-
 const router = useRouter();
-
-const facilities = getFacilities();
+const {data:{facilities},methods:{fetchFacilities}} = useFacility();
+await fetchFacilities();
 
 const goToFacility = (slug: string) => {
   router.push(`/facilities/${slug}`);
