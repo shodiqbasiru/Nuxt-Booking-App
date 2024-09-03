@@ -1,6 +1,25 @@
-# Nuxt 3 Minimal Starter
+# HanaBass Booking Application
+HanaBass Application is a sample website application for booking hotel rooms. This application is built using Nuxt 3, and HanaBass Hotel is the sample hotel name used in this application.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+You can visit the website [here](https://hana-bass-booking-app.nuxt.dev/).
+
+## Features
+- [x] Home Page
+- [x] Room Page
+- [x] Room Details Page
+- [x] Facilities Page
+- [x] Facilities Details Page
+- [x] Booking Page
+- [x] Booking Confirmation Page
+- [x] Contact Page
+- [x] About Page
+
+## Technologies Used
+- Nuxt 3
+- Vue 3
+- TypeScript
+- Tailwind CSS
+- Swiper
 
 ## Setup
 
@@ -19,57 +38,20 @@ yarn install
 # bun
 bun install
 ```
+In this project, we are using bun as the package manager.
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Running the project
 
 ```bash
 # npm
 npm run dev
 
 # pnpm
-pnpm run dev
+pnpm dev
 
 # yarn
 yarn dev
 
 # bun
-bun run dev
+bun dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
