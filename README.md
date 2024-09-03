@@ -10,7 +10,7 @@ You can visit the website [here](https://hana-bass-booking-app.nuxt.dev/).
 - [x] Facilities Page
 - [x] Facilities Details Page
 - [x] Booking Page
-- [x] Booking Confirmation Page
+- [x] Payment Page
 - [x] Contact Page
 - [x] About Page
 
